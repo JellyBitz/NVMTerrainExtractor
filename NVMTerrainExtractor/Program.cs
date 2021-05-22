@@ -98,7 +98,7 @@ namespace NVMTerrainExtractor
                     await fs.WriteAsync(buffer, 0, buffer.Length);
 
                     // Writing mesh as group
-                    buffer = System.Text.Encoding.ASCII.GetBytes($"g {mesh.Name}_{mesh.OffsetPosY}x{mesh.OffsetPosY}" + Environment.NewLine);
+                    buffer = System.Text.Encoding.ASCII.GetBytes($"g {mesh.Name}_{mesh.OffsetPosY}x{mesh.OffsetPosX}" + Environment.NewLine);
                     await fs.WriteAsync(buffer, 0, buffer.Length);
 
                     foreach (var v in mesh.Vertices)
